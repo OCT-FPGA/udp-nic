@@ -45,10 +45,10 @@ void packet_handler(u_char *args, const struct pcap_pkthdr *header, const u_char
     */    
     // IP header info
     struct iphdr *ip_header = (struct iphdr*)(packet + sizeof(struct ether_header));
-    //printf("Source IP: %s\n", inet_ntoa(*(struct in_addr *)&ip_header->saddr));
-    //printf("Destination IP: %s\n", inet_ntoa(*(struct in_addr *)&ip_header->daddr));
-    //printf("IP Protocol: %d\n", (unsigned int)ip_header->protocol);
-   
+    /*printf("Source IP: %s\n", inet_ntoa(*(struct in_addr *)&ip_header->saddr));
+    printf("Destination IP: %s\n", inet_ntoa(*(struct in_addr *)&ip_header->daddr));
+    printf("IP Protocol: %d\n", (unsigned int)ip_header->protocol);
+    */
     // UDP header info
     if (ip_header->protocol == IPPROTO_UDP) {
         struct udphdr *udp_header = (struct udphdr *)(packet + sizeof(struct ether_header) + sizeof(struct iphdr));
@@ -58,7 +58,5 @@ void packet_handler(u_char *args, const struct pcap_pkthdr *header, const u_char
 	int payload_size = ntohs(udp_header->len) - sizeof(struct udphdr);
 	printf("Packet #%d, Payload Size: %d\n", ++packet_count, payload_size);
     }
-    
-    *(int *)args = packet_count;
 }
 
