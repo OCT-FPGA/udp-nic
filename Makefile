@@ -14,7 +14,7 @@ receiver: receiver.c
 	$(CC) receiver.c -o receiver $(CFLAGS) $(LDFLAGS)
 
 packet_capture: packet_capture.c
-	$(CC) packet_capture.c -o packet_capture $(CFLAGS) $(LIBS)
+	$(CC) packet_capture.c -o packet_capture $(LIBS)
 
 clean:
 	rm -f sender receiver packet_capture
