@@ -27,12 +27,12 @@ $ sudo ./packet_capture
 Next, start the receiver program on the receiving machine:
 
 ```bash
-$ sudo ./receiver <filename>
+$ ./receiver <number of packets> <decrypt|no-decrypt> 
 ```
 Finally, start the sender program on the sending machine:
 
 ```bash
-$ sudo ./sender <filename> <receiver_ip>
+$ ./sender <number of packets> <encrypt|no-encrypt> <receiver IP>
 ```
 
 The file will be transmitted over UDP and saved to disk on the receiving machine. The packet capture program will print the size of each received packet.
