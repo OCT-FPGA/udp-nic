@@ -19,18 +19,23 @@ To build the programs, use the following commands:
 ```bash
 $ make
 ```
+
+### Deployment
+
+Create a CloudLab experiment with the profile ```u280-fpga-nic``` and configure it to use two nodes, one designated as the sender and the other as the receiver.
+
 Usage
-To use the programs, first start the packet capture program on the receiving machine:
+To use the programs, first start the packet capture program on the receiving node:
 
 ```bash
 $ sudo ./packet_capture
 ```
-Next, start the receiver program on the receiving machine:
+Next, start the receiver program on the receiving node:
 
 ```bash
 $ ./receiver <number_of_packets> <decrypt|no-decrypt> 
 ```
-Finally, start the sender program on the sending machine:
+Finally, start the sender program on the sending node:
 
 ```bash
 $ ./sender <number_of_packets> <encrypt|no-encrypt> <receiver IP>
