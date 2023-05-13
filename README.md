@@ -38,8 +38,10 @@ $ ./receiver <number_of_packets> <decrypt|no-decrypt>
 Finally, start the sender program on the sending node:
 
 ```bash
-$ ./sender <number_of_packets> <encrypt|no-encrypt> <receiver IP>
+$ ./sender <number_of_packets> <encrypt|no-encrypt> <sender IP> <receiver IP>
 ```
+
+On the CloudLab nodes, you can obtain the sender/receiver IPs by running ```ifconfig```. You should use the IP address of the interface ```enp175s0```.
 
 The packet capture program will print the size of each received packet.
 
