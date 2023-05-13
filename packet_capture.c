@@ -7,7 +7,7 @@
 #include <netinet/udp.h>
 #include <pcap.h>
 
-#define MAX_PACKETS 100
+#define MAX_PACKETS 1000
 
 void packet_handler(u_char *args, const struct pcap_pkthdr *header, const u_char *packet);
 
@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
 void packet_handler(u_char *args, const struct pcap_pkthdr *header, const u_char *packet) {
     int packet_count = *(int *)args;
     pcap_t *handle = (pcap_t *)args;
-    printf("Packet #%d, Size: %d\n", ++packet_count, header->len);
+    //printf("Packet #%d, Size: %d\n", ++packet_count, header->len);
     
     // Ethernet frame info
     struct ether_header *eth_header = (struct ether_header *) packet;
