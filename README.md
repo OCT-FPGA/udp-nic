@@ -36,6 +36,6 @@ Finally, start the sender program on the sending machine:
 $ ./sender <number_of_packets> <encrypt|no-encrypt> <receiver IP>
 ```
 
-he packet capture program will print the size of each received packet.
+The packet capture program will print the size of each received packet.
 
 Note: Make sure that the receiver machine is running the packet capture program and that the receiver IP address is correct.
