@@ -8,13 +8,13 @@ LDFLAGS = -lssl -lcrypto
 all: sender receiver packet_capture
 
 sender: sender.c
-	$(CC) $(CFLAGS) $(LDFLAGS) -o sender sender.c
+	$(CC) sender.c -o sender $(CFLAGS) $(LDFLAGS) 
 
 receiver: receiver.c
-	$(CC) $(CFLAGS) $(LDFLAGS) -o receiver receiver.c
+	$(CC) receiver.c -o receiver $(CFLAGS) $(LDFLAGS)
 
 packet_capture: packet_capture.c
-	$(CC) $(CFLAGS) $(LIBS) -o packet_capture packet_capture.c
+	$(CC) packet_capture.c -o packet_capture $(CFLAGS) $(LIBS)
 
 clean:
 	rm -f sender receiver packet_capture
