@@ -58,5 +58,6 @@ void packet_handler(u_char *args, const struct pcap_pkthdr *header, const u_char
 	int payload_size = ntohs(udp_header->len) - sizeof(struct udphdr);
 	printf("Packet #%d, Payload Size: %d\n", ++packet_count, payload_size);
     }
+    *(int *)args = packet_count;		
 }
 
