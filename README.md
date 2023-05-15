@@ -1,4 +1,4 @@
-## UDP Encrypt-Decrypt with 100 GbE NIC
+## UDP Encryption-Decryption with 100 GbE NIC
 This repository contains the necessary source files for sending and receiving UDP packets with a specified size through the 100 GbE network in OCT. It should be noted that the transmission and reception of UDP packets is executed by the host, rather than the FPGA as explained in the [udp-network-demo](https://github.com/OCT-FPGA/udp-network-demo). 
 Additionally, software-based AES encryption and decryption can be used to encrypt and decrypt messages, similar to the approach taken in the udp-network-demo. There are three programs in this repository:
 
